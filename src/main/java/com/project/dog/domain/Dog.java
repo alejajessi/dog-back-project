@@ -11,9 +11,8 @@ public class Dog {
     private String[] vaccines;
     private String city;
     private String age;
-    private String photo;
 
-    public Dog (String name, String breed, String gender, boolean isTreatment, String treatment, boolean isVaccinated, String[] vaccines, String city, String age, String photo ){
+    public Dog(String name, String breed, String gender, boolean isTreatment, String treatment, boolean isVaccinated, String[] vaccines, String city, String age){
 
         this.name = name;
         this.breed = breed;
@@ -24,7 +23,6 @@ public class Dog {
         this.vaccines = vaccines;
         this.city = city;
         this.age = age;
-        this.photo = photo;
     }
 
     public String getName() {
@@ -63,10 +61,6 @@ public class Dog {
         return city;
     }
 
-    public String getPhoto() {
-        return photo;
-    }
-
     public void setBreed(String breed) {
         this.breed = breed;
     }
@@ -93,10 +87,6 @@ public class Dog {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
     }
 
     public void setVaccinated(boolean vaccinated) {
