@@ -1,7 +1,23 @@
 package com.project.dog.domain;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Dog {
 
+    @Id
+    @SequenceGenerator(
+            name = "dog_sequence",
+            sequenceName = "dog_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue (
+            strategy = GenerationType.SEQUENCE,
+            generator = "dog_sequence"
+    )
+    private long id;
     private String name;
     private String breed;
     private String gender;
