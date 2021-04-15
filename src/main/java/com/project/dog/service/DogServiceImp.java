@@ -1,6 +1,7 @@
 package com.project.dog.service;
 
 import com.project.dog.domain.Dog;
+import com.project.dog.repository.IDogRepository;
 import com.project.dog.service.interfaces.IDogService;
 import org.springframework.stereotype.Component;
 
@@ -9,18 +10,14 @@ import java.util.List;
 @Component
 public class DogServiceImp implements IDogService {
 
+    private final IDogRepository dogRepository;
+
+    public DogServiceImp(IDogRepository dogRepository) {
+        this.dogRepository = dogRepository;
+    }
+
     public List<Dog> getAll() {
-        return List.of(new Dog(
-                "Pepe",
-                "Mestizo",
-                "masculino",
-                true,
-                "Meloxicam diario",
-                true,
-                null,
-                "Cali",
-                "8 meses aprox")
-        );
+        return dogRepository.findAll();
     }
 
     @Override
