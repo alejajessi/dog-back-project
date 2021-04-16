@@ -1,6 +1,7 @@
 package com.project.dog.controller;
 
 import com.project.dog.domain.Dog;
+import com.project.dog.service.DogServiceImp;
 import com.project.dog.service.interfaces.IDogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +16,6 @@ public class DogController {
 
     @Autowired
     private IDogService dogService;
-
-    public DogController(IDogService dogService) {
-        this.dogService = dogService;
-    }
 
     @GetMapping
     public List<Dog> getDogs() {
