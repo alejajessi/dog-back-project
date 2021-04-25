@@ -4,9 +4,7 @@ import com.project.dog.domain.Dog;
 import com.project.dog.service.DogServiceImp;
 import com.project.dog.service.interfaces.IDogService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,10 @@ public class DogController {
     @GetMapping
     public List<Dog> getDogs() {
         return dogService.getAll();
+    }
+
+    @PostMapping
+    public void registerNewDog (@RequestBody Dog dog){
+        dogService.addNewDog(dog);
     }
 }

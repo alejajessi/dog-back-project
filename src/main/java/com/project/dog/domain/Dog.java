@@ -33,6 +33,7 @@ class Dog {
     private boolean isVaccinated;
     private String[] vaccines;
     private String city;
+    @Transient
     private String age;
 
     public Dog(){}

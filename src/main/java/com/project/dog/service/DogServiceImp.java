@@ -40,4 +40,9 @@ public class DogServiceImp implements IDogService {
 
     }
 
+    @Override
+    public void addNewDog(Dog dog) {
+
+    }
+
 }

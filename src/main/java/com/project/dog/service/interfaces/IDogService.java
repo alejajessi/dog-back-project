@@ -11,5 +11,5 @@ public interface IDogService {
     Dog save(Dog dog);
     Dog replace(String name, Dog animal);
     void delete(String name);
-
+    void addNewDog(Dog dog);
 }
